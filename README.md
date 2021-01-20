@@ -1,6 +1,8 @@
-# Quasar App (logtoolkit_electron)
+# LogToolkit Electron App
 
-A Quasar Framework app
+Powered with [Quasar Framework](https://quasar.dev)
+
+![LogToolkit](./app_screenshot.png)
 
 ## Install the dependencies
 ```bash
@@ -9,7 +11,7 @@ npm install
 
 ### Start the app in development mode (hot-code reloading, error reporting, etc.)
 ```bash
-quasar dev
+quasar dev -m electron
 ```
 
 ### Lint the files
@@ -17,9 +19,11 @@ quasar dev
 npm run lint
 ```
 
-### Build the app for production
+### Build the app for MacOS
 ```bash
-quasar build
+npm i -g electron-installer-dmg
+quasar build -m electron
+electron-installer-dmg ./dist/electron/LogToolkit-darwin-x64/LogToolkit.app LogToolkit
 ```
 
 ### Customize the configuration
